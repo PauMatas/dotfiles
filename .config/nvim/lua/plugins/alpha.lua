@@ -49,6 +49,10 @@ return {
       [[⠀⠀⠀⠀⠀⠀⠀⠀⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                       ]],
     }
 
+    -- dashboard.section.buttons.val = {
+    --     dashboard.button( "SPC SPC", "> Find file", ":cd $HOME | Telescope find_files<CR>"),
+    -- }
+
     alpha.setup(dashboard.opts)
   end,
 }
