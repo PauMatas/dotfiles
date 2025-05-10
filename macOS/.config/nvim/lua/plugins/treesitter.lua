@@ -16,6 +16,7 @@ return {
           "lua",
           "python",
           "markdown",
+          "rust",
         },
         highlight = { enable = true },
         indent = { enable = false },

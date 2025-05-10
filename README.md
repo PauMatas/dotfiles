@@ -1,2 +1,2 @@
-# π-mats dotfile's 🤓
+# π-mats dotfiles 🤓
 

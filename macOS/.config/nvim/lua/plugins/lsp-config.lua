@@ -36,6 +36,19 @@ return {
             lspconfig.pyright.setup({
                 capabilities = capabilities,
             })
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+                settings = {
+                    ["rust_analyzer"] = {
+                        cargp = {
+                            allFeatures = true,
+                        },
+                        checkOnSave = {
+                            command = "clippy",
+                        },
+                    },
+                },
+            })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
