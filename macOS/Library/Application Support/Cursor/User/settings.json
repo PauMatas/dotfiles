@@ -59,7 +59,15 @@
                 "+",
                 "p"
             ]
-        }
+        },
+        {
+            "before": ["<leader>", "f", "g"],
+            "commands": ["workbench.action.findInFiles"]
+          },
+          {
+            "before": ["<leader>", "<leader>"],
+            "commands": ["workbench.action.quickOpen"]
+          }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
