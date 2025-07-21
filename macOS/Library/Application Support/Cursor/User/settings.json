@@ -1,0 +1,88 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Monokai",
+    "vim.leader": " ",
+    "vim.useSystemClipboard": false,
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "off",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.cursorSurroundingLines": 8,
+    "editor.scrollBeyondLastLine": false,
+    "editor.lineNumbers": "relative",
+    "editor.glyphMargin": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                ":nohlsearch"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "y"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "p"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "y"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "y"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "+",
+                "p"
+            ]
+        }
+    ]
+}
