@@ -34,3 +34,7 @@ alias glog="git log --oneline --graph --decorate --all"
 
 # Barra del terminal (starship)
 eval "$(starship init zsh)"
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+eval "$(~/.local/bin/mise activate)"

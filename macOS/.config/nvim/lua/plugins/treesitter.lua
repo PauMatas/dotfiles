@@ -17,6 +17,8 @@ return {
           "python",
           "markdown",
           "rust",
+          "ruby",
+          "sql",
         },
         highlight = { enable = true },
         indent = { enable = false },
