@@ -49,9 +49,12 @@ return {
       [[⠀⠀⠀⠀⠀⠀⠀⠀⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                       ]],
     }
 
-    -- dashboard.section.buttons.val = {
-    --     dashboard.button( "SPC SPC", "> Find file", ":cd $HOME | Telescope find_files<CR>"),
-    -- }
+    dashboard.section.buttons.val = {
+      dashboard.button("e",          "  New file",                 ":ene <BAR> startinsert<CR>"),
+      dashboard.button("SPC f f",    "󰈞  Find file",                ":Telescope find_files<CR>"),
+      dashboard.button("SPC f g",    "󰈬  Find word",                ":Telescope live_grep<CR>"),
+      dashboard.button("<C-n>",      "  Open directory tree",      ":Neotree<CR>"),
+    }
 
     alpha.setup(dashboard.opts)
   end,
