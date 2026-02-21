@@ -10,12 +10,17 @@ return {
         "williamboman/mason-lspconfig.nvim",
         lazy = false,
         opts = {
+            ensure_installed = { "bashls", "lua_ls", "pyright", "rust_analyzer", "ruby_lsp", "gopls", "ts_ls", "cssls" },
             auto_install = true,
         },
     },
     {
         "neovim/nvim-lspconfig",
         lazy = false,
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "williamboman/mason-lspconfig.nvim",
+        },
         config = function()
             local cmp_nvim_lsp = require("cmp_nvim_lsp")
             local capabilities = vim.tbl_deep_extend(
@@ -51,6 +56,23 @@ return {
             })
             lspconfig.ruby_lsp.setup({
                 capabilities = capabilities,
+            })
+            lspconfig.ts_ls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.cssls.setup({
+                capabilities = capabilities,
+            })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+                settings = {
+                    gopls = {
+                        analyses = {
+                            unusedparams = true,
+                        },
+                        staticcheck = true,
+                    },
+                },
             })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
