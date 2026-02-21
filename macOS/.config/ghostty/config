@@ -1,0 +1,5 @@
+# Split navigation with Ctrl+Shift+hjkl (Ctrl+hjkl reserved for nvim)
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
