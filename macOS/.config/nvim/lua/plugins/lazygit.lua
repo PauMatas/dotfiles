@@ -17,4 +17,13 @@ return {
 	keys = {
 		{ "<leader>lg", "<cmd>LazyGitCurrentFile<cr>", desc = "LazyGit" },
 	},
+	config = function()
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "lazygit",
+			callback = function(event)
+				vim.keymap.set("t", "j", "j", { buffer = event.buf, nowait = true })
+				vim.keymap.set("t", "k", "k", { buffer = event.buf, nowait = true })
+			end,
+		})
+	end,
 }
